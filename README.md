@@ -1,1 +1,2 @@
-#Email Alias Generator written in Python 3
+# Email Alias Generator
+### written in Python 3
