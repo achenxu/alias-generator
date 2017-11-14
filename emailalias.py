@@ -14,7 +14,7 @@ def program_start():
   # split email and check if valid
     if "@" not in email:
       print("Invalid email")
-    elif "." not in email:
+    elif "." not in username[1]:
       print("Invalid domain")
     elif "+" in email:
       print("Must not be an alias already")
