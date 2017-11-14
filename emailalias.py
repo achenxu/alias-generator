@@ -32,5 +32,5 @@ def program_start():
   print("Your file is called {}.txt".format(username[0]))
 
 
-
-program_start()
+if __name__ == '__main__':
+  program_start()
