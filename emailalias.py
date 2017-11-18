@@ -19,8 +19,15 @@ def program_start():
     elif "+" in email:
       print("Must not be an alias already")
     else: 
-      count = input("How many aliases do you want? ")
-      break  
+      print("Got it.")
+      break
+
+    count = input("How many aliases do you want? ")
+    if count == " ":
+      print("Try again.")
+    else:
+      continue
+  
   # write user input to file
   f = open("{}.txt".format(username[0]), "w")
   n = 1
