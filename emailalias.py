@@ -5,12 +5,12 @@ created with python 3.6.1
 '''
 import os
 
-def program_start():
-  # get user's email address  
+def main():
+  # get user's email address
   while True:
     # get user email
-    email = input("what's your email address? ").lower()
-    username = email.split("@")
+    email = (input("what's your email address? "))
+    username = email.lower().split("@")
   # split email and check if valid
     if "@" not in email:
       print("Invalid email")
@@ -18,19 +18,20 @@ def program_start():
       print("Invalid domain")
     elif "+" in email:
       print("Must not be an alias already")
-    else: 
-      count = input("How many aliases do you want? ")
-      break  
+    else:
+      count = int(input("How many aliases do you want? "))
+      break
   # write user input to file
-  f = open("{}.txt".format(username[0]), "w")
+  filename = (f'{username[0]}.txt')
+  file = open(filename, "w")
   n = 1
-  while (n <= int(count)):
-    f.write("{}+{}@{}\n".format(username[0],n,username[1]))
-    n = n + 1
-  f.close()
+  while (n <= count):
+    file.write(f"{username[0]}+{n}@{username[1]}\n")
+    n += 1
+  file.close()
   print("Done.")
-  print("Your file is called {}.txt".format(username[0]))
+  print(f"Your file is called {filename}")
 
 
 if __name__ == '__main__':
-  program_start()
+  main()
